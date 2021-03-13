@@ -445,7 +445,7 @@ class _District extends State<District> {
                       FlexWidget(
                         child: Container(
                           child: Container(
-                            child: FlatButton.icon(
+                            child: TextButton.icon(
                               icon: Icon(
                                 FlutterIcons.line_chart_faw,
                                 color: Colors.white,
@@ -457,7 +457,9 @@ class _District extends State<District> {
                                   fontSize: 15,
                                 ),
                               ),
-                              color: color,
+                              style: TextButton.styleFrom(
+                                backgroundColor: color,
+                              ),
                               onPressed: () => _selectcategory(context),
                             ),
                             alignment: Alignment.center,
@@ -476,7 +478,7 @@ class _District extends State<District> {
                       FlexWidget(
                         child: Container(
                           child: Container(
-                            child: FlatButton.icon(
+                            child: TextButton.icon(
                               icon: Icon(
                                 FlutterIcons.bar_chart_faw,
                                 color: Colors.white,
@@ -488,7 +490,9 @@ class _District extends State<District> {
                                   fontSize: 15,
                                 ),
                               ),
-                              color: color,
+                              style: TextButton.styleFrom(
+                                backgroundColor: color,
+                              ),
                               onPressed: () => _barchart(),
                             ),
                             alignment: Alignment.center,

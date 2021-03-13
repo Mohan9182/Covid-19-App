@@ -113,6 +113,7 @@ class _StatePage extends State<StatePage> {
     super.initState();
   }
 
+  // ignore: non_constant_identifier_names
   Color _get_background_color() {
     return (this.selectedindex == 0)
         ? Color.fromRGBO(77, 17, 41, 1)
@@ -645,7 +646,7 @@ class _StatePage extends State<StatePage> {
               FlexWidget(
                 child: Container(
                   child: Container(
-                    child: FlatButton.icon(
+                    child: TextButton.icon(
                       icon: Icon(
                         FlutterIcons.line_chart_faw,
                         color: Colors.white,
@@ -657,7 +658,9 @@ class _StatePage extends State<StatePage> {
                           fontSize: 15,
                         ),
                       ),
-                      color: _get_background_color(),
+                      style: TextButton.styleFrom(
+                        backgroundColor: _get_background_color(),
+                      ),
                       onPressed: () => _selectcategory(context),
                     ),
                     alignment: Alignment.center,
@@ -676,7 +679,7 @@ class _StatePage extends State<StatePage> {
               FlexWidget(
                 child: Container(
                   child: Container(
-                    child: FlatButton.icon(
+                    child: TextButton.icon(
                       icon: Icon(
                         FlutterIcons.bar_chart_faw,
                         color: Colors.white,
@@ -688,7 +691,8 @@ class _StatePage extends State<StatePage> {
                           fontSize: 15,
                         ),
                       ),
-                      color: _get_background_color(),
+                      style: TextButton.styleFrom(
+                          backgroundColor: _get_background_color()),
                       onPressed: () => _barchart(),
                     ),
                     alignment: Alignment.center,
