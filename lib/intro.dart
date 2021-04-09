@@ -11,11 +11,30 @@ class Intro extends StatelessWidget {
           primaryColor: Color.fromRGBO(22, 22, 37, 1),
           scaffoldBackgroundColor: Color.fromRGBO(22, 22, 37, 1)),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Covid-19 Tracker"),
-        ),
+        // appBar: AppBar(
+        //   leadingWidth: double.infinity,
+        //   title: Container(
+        //     child: IconButton(
+        //         icon: Icon(Icons.keyboard_arrow_left_outlined, size: 35),
+        //         onPressed: () {
+        //           Navigator.pop(context);
+        //         }),
+        //     alignment: Alignment.centerLeft,
+        //     margin: EdgeInsets.all(0),
+        //   ),
+        // ),
         body: Column(
           children: [
+            Container(
+              child: IconButton(
+                  icon: Icon(Icons.keyboard_arrow_left_outlined, size: 40),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.fromLTRB(0, 25, 0, 10),
+            ),
             Container(
               child: Image.asset(
                 'assets/icon.png',
@@ -41,7 +60,7 @@ class Intro extends StatelessWidget {
               child: Text(
                 'COVID-19 is a new strain of coronavirus that has not been previously identified in humans. The COVID-19 is the cause of an outbreak of respiratory illness first detected in Wuhan, Hubei province, China.',
                 style: GoogleFonts.oswald(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
@@ -53,7 +72,7 @@ class Intro extends StatelessWidget {
               child: Text(
                 "In COVID-19, 'CO' means 'crowns’, 'VI' for 'Viruses’, and 'D' for the disease.",
                 style: GoogleFonts.oswald(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),
@@ -65,7 +84,7 @@ class Intro extends StatelessWidget {
               child: Text(
                 'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Severe Acute Respiratory syndrome (SARS) and Middle East Respiratory Syndrome (MERS).',
                 style: GoogleFonts.oswald(
-                  fontSize: 18,
+                  fontSize: 17,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
                 ),

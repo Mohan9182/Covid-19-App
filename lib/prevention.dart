@@ -13,12 +13,44 @@ class prevention extends StatelessWidget {
             primaryColor: Color.fromRGBO(22, 22, 37, 1),
             scaffoldBackgroundColor: Color.fromRGBO(22, 22, 37, 1)),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("Covid-19 Tracker"),
-          ),
           body: SingleChildScrollView(
             child: Column(
               children: [
+                Container(
+                  child: ResponsiveRow(
+                    children: [
+                      FlexWidget(
+                        child: Container(
+                            child: IconButton(
+                                icon: Icon(Icons.keyboard_arrow_left_outlined,
+                                    size: 35),
+                                color: Colors.white,
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                })),
+                        xs: 1,
+                        md: 1,
+                        lg: 1,
+                        xl: 1,
+                      ),
+                      FlexWidget(
+                        child: Container(
+                            child: Text('Prevention',
+                                style: GoogleFonts.oswald(
+                                  color: Colors.white,
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                            alignment: Alignment.center),
+                        xs: 11,
+                        md: 11,
+                        lg: 11,
+                        xl: 11,
+                      )
+                    ],
+                  ),
+                  margin: EdgeInsets.fromLTRB(0, 25, 0, 25),
+                ),
                 Container(
                   child: ResponsiveRow(
                     children: [
@@ -56,7 +88,6 @@ class prevention extends StatelessWidget {
                       )
                     ],
                   ),
-                  margin: EdgeInsets.fromLTRB(18, 10, 15, 10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.greenAccent),
@@ -98,7 +129,7 @@ class prevention extends StatelessWidget {
                       )
                     ],
                   ),
-                  margin: EdgeInsets.fromLTRB(18, 10, 15, 10),
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.greenAccent),
@@ -140,7 +171,7 @@ class prevention extends StatelessWidget {
                       )
                     ],
                   ),
-                  margin: EdgeInsets.fromLTRB(18, 10, 15, 10),
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.greenAccent),
@@ -181,7 +212,7 @@ class prevention extends StatelessWidget {
                       )
                     ],
                   ),
-                  margin: EdgeInsets.fromLTRB(18, 10, 15, 10),
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.greenAccent),
@@ -223,7 +254,7 @@ class prevention extends StatelessWidget {
                       )
                     ],
                   ),
-                  margin: EdgeInsets.fromLTRB(18, 10, 15, 10),
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.greenAccent),
