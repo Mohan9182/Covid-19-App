@@ -1,16 +1,14 @@
-# Covid_19
+# Covid_19 Andriod and IOS Application
 
-A new Flutter project.
+This App keeps track of all the cases in India along with its states and Districts.This App also contains Global cases report and along with that it also supports latest news on covid-19 may be in India or anywhere around the world.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+![Homepage](/screenshots/Homepage.png)
+![StatePage"](/screenshots/StatePage.png)
+![Table"](/screenshots/Table.png)
+![StatePage_Categories"](/screenshots/StatePage_Categories.png)
+![DistrictPage"](/screenshots/DistrictPage.png)
+![District_bargraph"](/screenshots/District_bargraph.png)
+![WorldPage"](/screenshots/WorldPage.png)
+![NewsPage"](/screenshots/NewsPage.png)
+![OptionsPage"](/screenshots/OptionsPage.png)
