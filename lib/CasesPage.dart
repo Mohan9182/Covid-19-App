@@ -9,6 +9,7 @@ import 'package:ssh_app/statePage.dart';
 import 'package:ssh_app/worldpage.dart';
 import 'package:unicons/unicons.dart';
 
+// ignore: must_be_immutable
 class CasesPage extends StatefulWidget {
   CasesPage({
     Key key,

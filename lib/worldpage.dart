@@ -86,7 +86,7 @@ class _WorldPage extends State<WorldPage> {
   }
 
   _get_world_cases() async {
-    var response = await http.get('https://disease.sh/v3/covid-19/all');
+    var response = await http.get(Uri.parse('https://disease.sh/v3/covid-19/all'));
     return convert.jsonDecode(response.body);
   }
 
@@ -94,7 +94,7 @@ class _WorldPage extends State<WorldPage> {
   _get_country_cases() async {
     //var response = await http.get('https://coronavirus-19-api.herokuapp.com/countries');
     var response =
-        await http.get('https://disease.sh/v3/covid-19/countries?sort=cases');
+        await http.get(Uri.parse('https://disease.sh/v3/covid-19/countries?sort=cases'));
     return convert.jsonDecode(response.body);
   }
 
@@ -191,8 +191,8 @@ class _WorldPage extends State<WorldPage> {
                     ),
                     height: 90,
                   ),
-                  xs: 6,
-                  sm: 6,
+                  xs: 3,
+                  sm: 3,
                   md: 6,
                   lg: 6,
                 ),
@@ -226,8 +226,8 @@ class _WorldPage extends State<WorldPage> {
                     ),
                     height: 90,
                   ),
-                  xs: 6,
-                  sm: 6,
+                  xs: 3,
+                  sm: 3,
                   md: 6,
                   lg: 6,
                 ),
@@ -261,8 +261,8 @@ class _WorldPage extends State<WorldPage> {
                     ),
                     height: 90,
                   ),
-                  xs: 6,
-                  sm: 6,
+                  xs: 3,
+                  sm: 3,
                   md: 6,
                   lg: 6,
                 ),
@@ -297,8 +297,8 @@ class _WorldPage extends State<WorldPage> {
                     ),
                     height: 90,
                   ),
-                  xs: 6,
-                  sm: 6,
+                  xs: 3,
+                  sm: 3,
                   md: 6,
                   lg: 6,
                 )
@@ -396,7 +396,7 @@ class _WorldPage extends State<WorldPage> {
             padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
           ),
-          ResponsiveRow(columnsCount: 12, children: [
+          ResponsiveRow(columnsCount: 16, children: [
             Container(
               child: Row(children: [
                 Container(
@@ -418,8 +418,8 @@ class _WorldPage extends State<WorldPage> {
                     ],
                     crossAxisAlignment: CrossAxisAlignment.start,
                   ),
-                  xs: 3,
-                  sm: 4,
+                  xs: 2,
+                  sm: 2,
                   md: 4,
                   lg: 4,
                 )),
@@ -440,8 +440,8 @@ class _WorldPage extends State<WorldPage> {
                                     fontSize: 15, color: Colors.white))),
                       ],
                     ),
-                    xs: 3,
-                    sm: 4,
+                    xs: 2,
+                    sm: 2,
                     md: 4,
                     lg: 4,
                   ),
@@ -465,8 +465,8 @@ class _WorldPage extends State<WorldPage> {
                       ],
                       crossAxisAlignment: CrossAxisAlignment.start,
                     ),
-                    xs: 3,
-                    sm: 4,
+                    xs: 2,
+                    sm: 2,
                     md: 4,
                     lg: 4,
                   ),
@@ -488,8 +488,8 @@ class _WorldPage extends State<WorldPage> {
                       ),
                     ],
                   ),
-                  xs: 3,
-                  sm: 4,
+                  xs: 2,
+                  sm: 2,
                   md: 4,
                   lg: 4,
                 ),

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
@@ -6,9 +7,31 @@ import 'package:ssh_app/homepage.dart';
 import 'dart:convert' as convert;
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:ssh_app/model.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-void main() {
+Future main()  async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  if (Platform.isAndroid) {
+    await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
+
+    var swAvailable = await AndroidWebViewFeature.isFeatureSupported(
+        AndroidWebViewFeature.SERVICE_WORKER_BASIC_USAGE);
+    var swInterceptAvailable = await AndroidWebViewFeature.isFeatureSupported(
+        AndroidWebViewFeature.SERVICE_WORKER_SHOULD_INTERCEPT_REQUEST);
+
+    if (swAvailable && swInterceptAvailable) {
+      AndroidServiceWorkerController serviceWorkerController =
+          AndroidServiceWorkerController.instance();
+
+      serviceWorkerController.serviceWorkerClient = AndroidServiceWorkerClient(
+        shouldInterceptRequest: (request) async {
+          print(request);
+          return null;
+        },
+      );
+    }
+  }
   runApp(MyApp());
 }
 
@@ -92,7 +115,7 @@ class _SplashScreen extends State<SplashScreen> {
   // ignore: non_constant_identifier_names
   _get_news() async {
     var response = await http.get(
-        "https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&country=in&page=1&page_size=10&media=True",
+        Uri.parse("https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&country=in&page=1&page_size=10&media=True"),
         headers: {
           "x-rapidapi-key":
               "789d22491amsh9cf6fe5ac3b3cf8p195e80jsn0b807e6d418c",
@@ -104,19 +127,19 @@ class _SplashScreen extends State<SplashScreen> {
   // ignore: non_constant_identifier_names
   _get_daily_changes() async {
     var response =
-        await http.get('https://api.covid19india.org/states_daily.json');
+        await http.get(Uri.parse('https://api.covid19india.org/states_daily.json'));
     return convert.jsonDecode(response.body);
   }
 
   // ignore: non_constant_identifier_names
   _get_state_details() async {
-    var response = await http.get('https://api.covid19india.org/misc.json');
+    var response = await http.get(Uri.parse('https://api.covid19india.org/misc.json'));
     return convert.jsonDecode(response.body);
   }
 
   // ignore: non_constant_identifier_names
   _get_district_details() async {
-    var response = await http.get('https://api.covid19india.org/misc.json');
+    var response = await http.get(Uri.parse('https://api.covid19india.org/misc.json'));
     return convert.jsonDecode(response.body);
   }
 

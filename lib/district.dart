@@ -136,7 +136,7 @@ class _District extends State<District> {
   // ignore: non_constant_identifier_names
   _get_daily_changes() async {
     var response =
-        await http.get('https://api.covid19india.org/states_daily.json');
+        await http.get(Uri.parse('https://api.covid19india.org/states_daily.json'));
     return convert.jsonDecode(response.body);
   }
 
@@ -178,7 +178,7 @@ class _District extends State<District> {
   // ignore: non_constant_identifier_names
   _get_district_cases() async {
     var response =
-        await http.get('https://api.covid19india.org/state_district_wise.json');
+        await http.get(Uri.parse('https://api.covid19india.org/state_district_wise.json'));
     return convert.jsonDecode(response.body);
   }
 
@@ -470,8 +470,8 @@ class _District extends State<District> {
                               color: color),
                           height: 75,
                         ),
-                        xs: 6,
-                        md: 6,
+                        xs: 3,
+                        md: 3,
                         xl: 6,
                         lg: 6,
                       ),
@@ -503,8 +503,8 @@ class _District extends State<District> {
                               color: color),
                           height: 75,
                         ),
-                        xs: 6,
-                        md: 6,
+                        xs: 3,
+                        md: 3,
                         xl: 6,
                         lg: 6,
                       ),

@@ -536,7 +536,7 @@ class _StatePage extends State<StatePage> {
           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
           margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
         ),
-        ResponsiveRow(columnsCount: 12, children: [
+        ResponsiveRow(columnsCount: 16, children: [
           Container(
             child: Row(children: [
               Container(
@@ -558,8 +558,8 @@ class _StatePage extends State<StatePage> {
                   ],
                   crossAxisAlignment: CrossAxisAlignment.start,
                 ),
-                xs: 3,
-                sm: 4,
+                xs: 2,
+                sm: 2,
                 md: 4,
                 lg: 4,
               )),
@@ -580,8 +580,8 @@ class _StatePage extends State<StatePage> {
                                   fontSize: 15, color: Colors.white))),
                     ],
                   ),
-                  xs: 3,
-                  sm: 4,
+                  xs: 2,
+                  sm: 2,
                   md: 4,
                   lg: 4,
                 ),
@@ -605,8 +605,8 @@ class _StatePage extends State<StatePage> {
                     ],
                     crossAxisAlignment: CrossAxisAlignment.start,
                   ),
-                  xs: 3,
-                  sm: 4,
+                  xs: 2,
+                  sm: 2,
                   md: 4,
                   lg: 4,
                 ),
@@ -628,8 +628,8 @@ class _StatePage extends State<StatePage> {
                     ),
                   ],
                 ),
-                xs: 3,
-                sm: 4,
+                xs: 2,
+                sm: 2,
                 md: 4,
                 lg: 4,
               ),
@@ -640,7 +640,7 @@ class _StatePage extends State<StatePage> {
         ]),
         Container(
           child: ResponsiveRow(
-            columnsCount: 13,
+            columnsCount: 17,
             spacing: 10,
             children: [
               FlexWidget(
@@ -671,10 +671,10 @@ class _StatePage extends State<StatePage> {
                       color: _get_background_color()),
                   height: 75,
                 ),
-                xs: 6,
-                md: 6,
-                xl: 6,
-                lg: 6,
+                xs: 4,
+                md: 4,
+                xl: 8,
+                lg: 8,
               ),
               FlexWidget(
                 child: Container(
@@ -703,14 +703,14 @@ class _StatePage extends State<StatePage> {
                       color: _get_background_color()),
                   height: 75,
                 ),
-                xs: 6,
-                md: 6,
-                xl: 6,
-                lg: 6,
+                xs: 4,
+                md: 4,
+                xl: 8,
+                lg: 8,
               ),
             ],
           ),
-          margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+          margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
         ),
         DataTable(
           columns: [

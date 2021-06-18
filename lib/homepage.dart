@@ -203,7 +203,7 @@ class _Homepage extends State<HomePage> {
 
   // ignore: non_constant_identifier_names
   _get_state_data() async {
-    var response = await http.get('https://api.covid19india.org/v4/data.json');
+    var response = await http.get(Uri.parse('https://api.covid19india.org/v4/data.json'));
     return convert.jsonDecode(response.body);
   }
 
@@ -235,6 +235,8 @@ class _Homepage extends State<HomePage> {
                 width: 500,
               ),
               ResponsiveRow(
+                columnsCount: 16,
+                direction: Axis.vertical,
                 children: [
                   FlexWidget(
                     child: Container(
@@ -267,10 +269,10 @@ class _Homepage extends State<HomePage> {
                       ),
                       height: 90,
                     ),
-                    xs: 6,
-                    sm: 6,
-                    md: 6,
-                    lg: 6,
+                    xs: 4,
+                    sm: 4,
+                    md: 8,
+                    lg: 8,
                   ),
                   FlexWidget(
                     child: Container(
@@ -303,10 +305,10 @@ class _Homepage extends State<HomePage> {
                       ),
                       height: 90,
                     ),
-                    xs: 6,
-                    sm: 6,
-                    md: 6,
-                    lg: 6,
+                    xs: 4,
+                    sm: 4,
+                    md: 8,
+                    lg: 8,
                   ),
                   FlexWidget(
                     child: Container(
@@ -339,10 +341,10 @@ class _Homepage extends State<HomePage> {
                       ),
                       height: 90,
                     ),
-                    xs: 6,
-                    sm: 6,
-                    md: 6,
-                    lg: 6,
+                    xs: 4,
+                    sm: 4,
+                    md: 8,
+                    lg: 8,
                   ),
                   FlexWidget(
                     child: Container(
@@ -375,10 +377,10 @@ class _Homepage extends State<HomePage> {
                       ),
                       height: 90,
                     ),
-                    xs: 6,
-                    sm: 6,
-                    md: 6,
-                    lg: 6,
+                    xs: 4,
+                    sm: 4,
+                    md: 8,
+                    lg: 8,
                   )
                 ],
               ),

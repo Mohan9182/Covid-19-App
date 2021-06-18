@@ -36,8 +36,8 @@ class _InAppViewNews extends State<InAppViewNews>{
                   child: Icon(UniconsLine.arrow_left,size: 30),
                   xs: 1,
                   md: 1,
-                  lg: 1,
-                  xl: 1,
+                  lg: 2,
+                  xl: 2,
                 ),
                 onTap: (){
                   Navigator.pop(context);
@@ -48,8 +48,8 @@ class _InAppViewNews extends State<InAppViewNews>{
                   child:Text("News",style: GoogleFonts.oswald(fontSize: 21),),
                   alignment: Alignment.center,
                 ),
-                xs: 9,
-                xl: 9,
+                xs: 5,
+                xl: 5,
                 md: 9,
                 lg: 9,
               ),
@@ -61,7 +61,7 @@ class _InAppViewNews extends State<InAppViewNews>{
               FlexWidget(
                 child:Container(
                   child:InAppWebView(
-                    initialUrl: widget.link,
+                    initialUrlRequest: URLRequest(url: Uri.parse(widget.link)),
                   ),
                   width: 400,
                   height: 800,
